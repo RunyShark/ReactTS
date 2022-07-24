@@ -1,6 +1,9 @@
 import { useState } from "react";
+interface Props {
+  value?: number;
+}
 
-export const Conunter = ({ value = 0 }) => {
+export const Conunter = ({ value = 0 }: Props) => {
   const [counter, setcounter] = useState(value);
 
   return (
