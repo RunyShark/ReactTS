@@ -1,4 +1,9 @@
-import { Conunter, ConunterBy, ConunterEffec } from "./index/index";
+import {
+  Conunter,
+  ConunterBy,
+  ConunterEffec,
+  ConunterHook,
+} from "./index/index";
 function App() {
   return (
     <>
@@ -7,6 +12,7 @@ function App() {
       <Conunter value={15} />
       <ConunterBy />
       <ConunterEffec />
+      <ConunterHook />
     </>
   );
 }
