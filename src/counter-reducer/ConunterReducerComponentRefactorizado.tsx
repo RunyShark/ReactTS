@@ -1,9 +1,5 @@
 import { useReducer } from "react";
-interface CounterState {
-  couter: number;
-  previus: number;
-  changes: number;
-}
+import { CounterState, counterReducer } from "./";
 
 const INITIAL_STATE: CounterState = {
   couter: 0,
@@ -11,35 +7,7 @@ const INITIAL_STATE: CounterState = {
   changes: 0,
 };
 
-type CounterAction =
-  | { type: "increasBy"; payload: { value: number } }
-  | { type: "restart" };
-
-const counterReducer = (
-  state: CounterState,
-  action: CounterAction
-): CounterState => {
-  const { couter, changes } = state;
-  switch (action.type) {
-    case "increasBy":
-      return {
-        couter: couter + action.payload.value,
-        previus: couter,
-        changes: changes + 1,
-      };
-    case "restart":
-      return {
-        couter: 0,
-        previus: 0,
-        changes: 0,
-      };
-
-    default:
-      return state;
-  }
-};
-
-export const ConunterReducerComponent = () => {
+export const ConunterReducerComponentRefactorizado = () => {
   const [{ couter, previus, changes }, dispatch] = useReducer(
     counterReducer,
     INITIAL_STATE
@@ -59,7 +27,7 @@ export const ConunterReducerComponent = () => {
 
   return (
     <>
-      <h1>ConunetReducer: {couter}</h1>
+      <h1>ConunetReducer segmentado: {couter}</h1>
       <h2>previus: {previus}</h2>
       <h2>changes: {changes}</h2>
 

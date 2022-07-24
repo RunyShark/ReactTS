@@ -3,7 +3,8 @@ import {
   // ConunterBy,
   // ConunterEffec,
   // ConunterHook,
-  ConunterReducerComponent,
+  // ConunterReducerComponent,
+  ConunterReducerComponentRefactorizado,
 } from "./index/index";
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <ConunterBy />
       <ConunterEffec />
       <ConunterHook /> */}
-      <ConunterReducerComponent />
+      <ConunterReducerComponentRefactorizado />
     </>
   );
 }
