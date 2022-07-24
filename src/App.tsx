@@ -4,7 +4,7 @@ function App() {
     <>
       <h1>React</h1>
       <hr />
-      <Conunter />
+      <Conunter value={15} />
     </>
   );
 }
