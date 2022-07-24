@@ -9,7 +9,7 @@ export const ConunterEffec = () => {
   }, [counter]);
 
   const haddleClick = () => {
-    setcounter(counter === MAXIMUN_COUNT ? 0 : counter + 1);
+    setcounter((counter) => Math.min(counter + 1, MAXIMUN_COUNT));
   };
 
   return (
