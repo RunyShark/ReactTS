@@ -1,4 +1,4 @@
-import { Conunter, ConunterBy } from "./index/index";
+import { Conunter, ConunterBy, ConunterEffec } from "./index/index";
 function App() {
   return (
     <>
@@ -6,6 +6,7 @@ function App() {
       <hr />
       <Conunter value={15} />
       <ConunterBy />
+      <ConunterEffec />
     </>
   );
 }
