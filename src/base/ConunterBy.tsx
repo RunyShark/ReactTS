@@ -16,9 +16,9 @@ export const ConunterBy = ({ value = 0 }: Props) => {
   const { counter: counterTag, clicks } = counter;
 
   const handleClick = (value: number) => {
-    setcounter((prev) => ({
-      counter: prev.counter + value,
-      clicks: prev.clicks + 1,
+    setcounter(({ counter, clicks }) => ({
+      counter: counter + value,
+      clicks: clicks + 1,
     }));
   };
   return (
